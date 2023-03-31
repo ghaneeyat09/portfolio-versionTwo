@@ -1,5 +1,6 @@
 import * as React from "react";
 import About from "../components/About";
+import Projects from "../components/Projects";
 import * as styles from "../styles/home.module.css";
 import "../styles/global.css";
 
@@ -14,5 +15,6 @@ export default function Home() {
                 </div>
              </div>
              <About />
+             <Projects />
          </>
 }
