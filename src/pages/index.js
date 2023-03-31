@@ -1,4 +1,5 @@
 import * as React from "react";
+import About from "../components/About";
 import * as styles from "../styles/home.module.css";
 import "../styles/global.css";
 
@@ -12,5 +13,6 @@ export default function Home() {
                   <h1>I build worldclass and innovative <span className={styles.text}>websites</span> using <span className={styles.text}> modern</span> technologies</h1>
                 </div>
              </div>
+             <About />
          </>
 }
