@@ -25,7 +25,7 @@ export default function Projects() {
               stack
               featuredImage {
                 childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED)
+                  gatsbyImageData
                 }
               }
             }
