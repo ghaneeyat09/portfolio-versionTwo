@@ -1,0 +1,14 @@
+.footer hr{
+    /* padding-bottom: 30px; */
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, var(--color-one), var(--color-two), var(--color-three));
+}
+.footer > p{
+    color: var(--color-four);
+    margin-top: 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}

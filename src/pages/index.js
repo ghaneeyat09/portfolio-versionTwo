@@ -1,10 +1,16 @@
 import * as React from "react";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import Social from "../components/Social";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import * as styles from "../styles/home.module.css";
 import "../styles/global.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+  AOS.init();
   return <>
              <div className={styles.background}>
                 <div className={styles.logo}>
@@ -16,5 +22,8 @@ export default function Home() {
              </div>
              <About />
              <Projects />
+             <Social />
+             <Contact />
+             <Footer />
          </>
 }

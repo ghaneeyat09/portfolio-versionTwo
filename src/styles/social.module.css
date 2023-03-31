@@ -1,0 +1,36 @@
+.wrapper{
+   width: 50%;
+   margin: auto;
+   display: flex;
+   height: 30px;
+   justify-content: space-between;
+   margin-bottom: 200px;
+}
+.wrapper > div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.wrapper > div img{
+    position: relative;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s ease-in-out;
+}
+.wrapper > div img:hover{
+    transform: scale(1.5)
+}
+@media screen and (max-width: 600px){
+    .wrapper{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 400px){
+    .wrapper{
+        width: 90%;
+        gap: 10px;
+        margin-bottom: 150px;
+        margin-top: -30px;
+    }
+}
