@@ -9,7 +9,6 @@
  */
 module.exports = {
   plugins: [
-    `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

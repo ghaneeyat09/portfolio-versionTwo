@@ -1,42 +1,36 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "../styles/projects.module.css";
-// import Img from "gatsby-image";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { config } from '@fortawesome/fontawesome-svg-core';
-// import {faBaseball, faGamepad} from '@fortawesome/free-solid-svg-icons';
-
-// Disable the auto CSS insertion
-// config.autoAddCss = false
+import Img from "gatsby-image";
 
 
 export default function Projects() {
     const data = useStaticQuery(graphql`
     query MyQuery {
-        allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
-          nodes {
-            frontmatter {
-              color
-              title
-              url
-              description
-              type
-              stack
-              featuredImage {
-                childImageSharp {
-                  gatsbyImageData
+      allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
+        nodes {
+          frontmatter {
+            color
+            title
+            url
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
-            id
+            description
+            type
+            stack
           }
+          id
         }
       }
+    }
     `)
     console.log(data);
     const projects = data.allMarkdownRemark.nodes;
-    // const image = getImage(projects.frontmatter.featuredImage);
     console.log(projects)
   return (
     <section className={styles.projects}>
@@ -48,8 +42,7 @@ export default function Projects() {
                 <div className={styles.flipCard} style={{boxShadow: `5px 5px 5px 0 ${project.frontmatter.color}`}}>
                     <div className={styles.flipCardInner}>
                         <div className={styles.flipCardFront}>
-                            {/* <Img fluid={project.frontmatter.featuredImage.childImageSharp.fluid} className={styles.img}/> */}
-                            <GatsbyImage image={getImage(project.frontmatter.featuredImage)} alt="project-thumbnail" className={styles.img}/>
+                            <Img fluid={project.frontmatter.featuredImage.childImageSharp.fluid} className={styles.img}/>
                         </div>              
                         <div className={styles.flipCardBack}>
                             <h1>{project.frontmatter.title}</h1> 
