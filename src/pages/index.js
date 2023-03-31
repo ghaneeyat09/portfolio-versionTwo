@@ -6,11 +6,11 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import * as styles from "../styles/home.module.css";
 import "../styles/global.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 export default function Home() {
-  AOS.init();
+  // AOS.init();
   return <>
              <div className={styles.background}>
                 <div className={styles.logo}>
