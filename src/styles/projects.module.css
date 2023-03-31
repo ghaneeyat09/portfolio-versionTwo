@@ -133,6 +133,7 @@
     align-items: center;
     flex-direction: column;
     color: var(--color-four);
+    background-color: black;
   }
 .flipCardBack h1{
     /* font-family: 'Abril Fatface', cursive; */
