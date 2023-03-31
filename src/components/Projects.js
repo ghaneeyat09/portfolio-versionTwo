@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-// import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "../styles/projects.module.css";
 // import Img from "gatsby-image";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -49,7 +49,7 @@ export default function Projects() {
                     <div className={styles.flipCardInner}>
                         <div className={styles.flipCardFront}>
                             {/* <Img fluid={project.frontmatter.featuredImage.childImageSharp.fluid} className={styles.img}/> */}
-                            {/* <GatsbyImage image={getImage(project.frontmatter.featuredImage)} alt="project-thumbnail" className={styles.img}/> */}
+                            <GatsbyImage image={getImage(project.frontmatter.featuredImage)} alt="project-thumbnail" className={styles.img}/>
                         </div>              
                         <div className={styles.flipCardBack}>
                             <h1>{project.frontmatter.title}</h1> 
