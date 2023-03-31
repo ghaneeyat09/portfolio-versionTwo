@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:wght@200;300&family=Raleway:wght@200;300;900&family=Sacramento&family=Space+Grotesk:wght@700&family=Tilt+Prism&display=swap');
+html{
+  --bg-size: 400%;
+  --color-one: hsl(299, 96%, 44%);
+  --color-two: hsl(40 95% 55%);
+  --color-three: rgb(16, 33, 221);
+  --color-four: rgb(255, 255, 255);
+  --color-five: rgb(172, 111, 68);
+  --color-six: rgb(22, 22, 22);
+  --color-seven: rgb(0, 0, 0);
+  scroll-behavior: smooth;
+}
+/**************just stuff ***************/
+.junks{
+  color: red;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  background-color: white
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+}
+body{
+    background-color: var(--color-seven);
+}
+.text{
+    color: white;
+}
+.section-header{
+    text-align: center;
+    color: var(--color-four);
+    margin-bottom: 200px; 
+    margin-top: 200px;
+    font-family: 'Sacramento', sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.notfound{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+}
+.notfound h1{
+  font-size: clamp(0.5rem, 15vmin, 3rem);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-three)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+}
+.notfound p{
+  font-size: 20px;
+  color: var(--color-four);
+}
+.find{
+    margin-bottom: 100px;
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: var(--color-six);
+  margin-block: .2em;
+  border-radius: 100vw;
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--color-seven);
+  border-radius: 100vw;
+  border: 2px solid var(--color-six);
+  height: 150px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .notfound h1 {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  .section-header{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 600px){
+  .section-header{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 400px){
+  .section-header{
+    font-size: 20px;
+  }
+
+}
