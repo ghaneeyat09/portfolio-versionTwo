@@ -60,9 +60,16 @@
 .contactWrap > form button{
     width: 150px;
     height: 35px;
+    border-radius: none;
+    background-color: var(--color-four);
     margin-top: 20px;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
+    border: none;
+    outline: none;
+}
+.contactWrap > form button:hover{
+    background-color: rgb(229, 229, 229);
 }
 .contactWrap > div{
     color: var(--color-four);
